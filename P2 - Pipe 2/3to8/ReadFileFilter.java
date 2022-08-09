@@ -17,7 +17,7 @@ public class ReadFileFilter extends Thread
 		{
 			// Open the file
 			// Note: three.dat must be copied to your project folder, or use relative path, e.g. "C:/three.dat"
-			FileInputStream file = new FileInputStream("three.dat");
+			FileInputStream file = new FileInputStream("/Users/andrew.clark/OneDrive - n-able/NapierYear4/SoftwareArchitecture/software-architecture-practicals/P2 - Pipe 2/3to8/three.dat");
 			input_file = new ObjectInputStream(file);
 			// We are sending objects (int[]) to the ConvertToIntFilter, so we use
 			// ObjectOutputStream
