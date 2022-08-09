@@ -2,9 +2,8 @@ import java.io.*;
 
 public class ReadLineThread extends Thread
 {
-	private PipedWriter pipeIn;
-	private BufferedReader input_file;
-	
+	private final PipedWriter pipeIn;
+
 	ReadLineThread(PipedWriter pipeIn)
 	{
 		this.pipeIn = pipeIn;
@@ -16,8 +15,8 @@ public class ReadLineThread extends Thread
 		{
 			// Open the file
 			// Note: kwic.dat must be copied to your project folder, or use relative path, e.g. "C:/kwic.dat"
-			FileReader file = new FileReader("kwic.dat");
-			input_file = new BufferedReader(file);
+			FileReader file = new FileReader("/Users/andrew.clark/OneDrive - n-able/NapierYear4/SoftwareArchitecture/software-architecture-practicals/P2 - Pipe 2/KWICPipe/kwic.dat");
+			BufferedReader input_file = new BufferedReader(file);
 			
 			// Loop until EOF
 			while (input_file.ready())
